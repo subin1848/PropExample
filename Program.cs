@@ -11,11 +11,13 @@ namespace PropExample
         static void Main(string[] args)
         {
             TestOver(3);
+
+            // 기본 생성자(기정생성자)는 생성자가 없을 경우에만 자동으로 생성
+            Product p1 = new Product("사과", 2000);
         }
 
         // 오버로딩 주의점
         //public static int TestOver(int input) { return 0; }
-        // int 타입 TestOver 메서드를 지워도 자동형변환이 되므로 double 타입의 TestOver 메서드로 간다.
         public static bool TestOver(double input) { return true; }
     }
 }
