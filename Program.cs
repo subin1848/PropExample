@@ -13,7 +13,9 @@ namespace PropExample
             TestOver(3);
 
             // 기본 생성자(기정생성자)는 생성자가 없을 경우에만 자동으로 생성
-            Product p1 = new Product("사과", 2000);
+            //Product p1 = new Product("사과", 2000);
+            // 팩토리 메서드 패턴 - private 생성자 사용
+            Product p = Product.getInstance("바나나", 2000);
         }
 
         // 오버로딩 주의점
