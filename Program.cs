@@ -31,6 +31,14 @@ namespace PropExample
             Console.WriteLine(Sample.value);   
             Console.WriteLine("세 번째 위치");
 
+            // const vs readonly
+            Item item1 = new Item("고구마", 1500);
+            Item item2 = new Item("감자", 1000);
+            Item item3 = new Item("옥수수", 2000);
+            Item item4 = new Item("토란", 2500);
+            Console.WriteLine(item1.id);
+            //Item1.id;
+            Console.WriteLine(item2.id);
         }
 
         // 오버로딩 주의점
