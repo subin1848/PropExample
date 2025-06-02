@@ -10,11 +10,16 @@ namespace PropExample
     {
         public string name;
         public int price;
+        public static Product product;
 
-        // 팩토리 메서드 패턴
+        // 팩토리 메서드 패턴 + 싱글톤 패턴
         public static Product getInstance(string name, int price)
         {
-            return new Product(name, price);
+            if(product == null)
+            {
+                product = new Product(name, price);
+            }
+            return product;
         }
         private Product(string name, int price)
         {
